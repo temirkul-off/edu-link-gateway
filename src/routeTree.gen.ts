@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VisaRouteImport } from './routes/visa'
+import { Route as StudyAbroadRouteImport } from './routes/study-abroad'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ParentsHelpRouteImport } from './routes/parents-help'
+import { Route as LanguageCoursesRouteImport } from './routes/language-courses'
+import { Route as ContactsRouteImport } from './routes/contacts'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VisaRoute = VisaRouteImport.update({
+  id: '/visa',
+  path: '/visa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudyAbroadRoute = StudyAbroadRouteImport.update({
+  id: '/study-abroad',
+  path: '/study-abroad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParentsHelpRoute = ParentsHelpRouteImport.update({
+  id: '/parents-help',
+  path: '/parents-help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LanguageCoursesRoute = LanguageCoursesRouteImport.update({
+  id: '/language-courses',
+  path: '/language-courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactsRoute = ContactsRouteImport.update({
+  id: '/contacts',
+  path: '/contacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/language-courses': typeof LanguageCoursesRoute
+  '/parents-help': typeof ParentsHelpRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/study-abroad': typeof StudyAbroadRoute
+  '/visa': typeof VisaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/language-courses': typeof LanguageCoursesRoute
+  '/parents-help': typeof ParentsHelpRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/study-abroad': typeof StudyAbroadRoute
+  '/visa': typeof VisaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contacts': typeof ContactsRoute
+  '/language-courses': typeof LanguageCoursesRoute
+  '/parents-help': typeof ParentsHelpRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/study-abroad': typeof StudyAbroadRoute
+  '/visa': typeof VisaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/language-courses'
+    | '/parents-help'
+    | '/sitemap.xml'
+    | '/study-abroad'
+    | '/visa'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/language-courses'
+    | '/parents-help'
+    | '/sitemap.xml'
+    | '/study-abroad'
+    | '/visa'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contacts'
+    | '/language-courses'
+    | '/parents-help'
+    | '/sitemap.xml'
+    | '/study-abroad'
+    | '/visa'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactsRoute: typeof ContactsRoute
+  LanguageCoursesRoute: typeof LanguageCoursesRoute
+  ParentsHelpRoute: typeof ParentsHelpRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StudyAbroadRoute: typeof StudyAbroadRoute
+  VisaRoute: typeof VisaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/visa': {
+      id: '/visa'
+      path: '/visa'
+      fullPath: '/visa'
+      preLoaderRoute: typeof VisaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/study-abroad': {
+      id: '/study-abroad'
+      path: '/study-abroad'
+      fullPath: '/study-abroad'
+      preLoaderRoute: typeof StudyAbroadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parents-help': {
+      id: '/parents-help'
+      path: '/parents-help'
+      fullPath: '/parents-help'
+      preLoaderRoute: typeof ParentsHelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/language-courses': {
+      id: '/language-courses'
+      path: '/language-courses'
+      fullPath: '/language-courses'
+      preLoaderRoute: typeof LanguageCoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contacts': {
+      id: '/contacts'
+      path: '/contacts'
+      fullPath: '/contacts'
+      preLoaderRoute: typeof ContactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +197,24 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactsRoute: ContactsRoute,
+  LanguageCoursesRoute: LanguageCoursesRoute,
+  ParentsHelpRoute: ParentsHelpRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StudyAbroadRoute: StudyAbroadRoute,
+  VisaRoute: VisaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

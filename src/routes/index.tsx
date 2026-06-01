@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GraduationCap, Globe2, FileCheck2, Languages, ArrowRight, CheckCircle2, Star, Users, Award, Headphones } from "lucide-react";
-import heroImg from "@/assets/hero-students.jpg";
+import heroImg from "@/assets/hero-students.jpeg";
 import { ApplicationForm } from "@/components/site/ApplicationForm";
 
 export const Route = createFileRoute("/")({

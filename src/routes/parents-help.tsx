@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import parentsImg from "@/assets/parents-help.jpg";
+import pamyatkaPdf from "@/assets/pamyatka.pdf.asset.json";
 import { Ear, Volume2, MessageSquare, Music, Heart, Download, AlertCircle, CheckCircle2 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
@@ -168,8 +169,9 @@ function ParentsHelpPage() {
             <h3 className="mt-4 text-2xl font-bold">Скачайте материалы</h3>
             <p className="mt-2 text-muted-foreground">Памятка для родителей с упражнениями и расписанием занятий — в формате PDF.</p>
             <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); alert("Материалы будут добавлены в ближайшее время."); }}
+              href={pamyatkaPdf.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary text-primary px-5 py-3 text-sm font-semibold hover:bg-primary-soft transition"
             >
               <Download className="h-4 w-4" /> Скачать памятку (PDF)

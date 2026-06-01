@@ -3,7 +3,7 @@ import { GraduationCap, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface mt-24">
+    <footer className="border-t border-border bg-surface">
       <div className="container-x py-14 grid gap-10 md:grid-cols-4">
         <div>
           <Link to="/" className="flex items-center gap-2 font-display font-bold text-lg">

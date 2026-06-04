@@ -35,9 +35,8 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold mb-3">Контакты</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Бишкек, пр. Ч. Айтматова 82А</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> +996 (000) 00-00-00</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> info@interedulink.kg</li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> +996 700207172</li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> interedulink2017@gmail.com</li>
           </ul>
         </div>
       </div>

@@ -52,7 +52,7 @@ export function ApplicationForm({ defaultCountry = "", compact = false }: Props)
     setTimeout(() => {
       setLoading(false);
       setSent(true);
-      window.open(`https://wa.me/996553432030?text=${text}`, "_blank");
+      window.open(`https://wa.me/996700207172?text=${text}`, "_blank");
     }, 400);
   }
 

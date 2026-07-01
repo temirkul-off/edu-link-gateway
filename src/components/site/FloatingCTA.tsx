@@ -4,7 +4,7 @@ export function FloatingCTA() {
   return (
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
       <a
-        href="https://wa.me/996000000000"
+        href="https://wa.me/996700207172"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
@@ -13,7 +13,7 @@ export function FloatingCTA() {
         <MessageCircle className="h-6 w-6" />
       </a>
       <a
-        href="tel:+996000000000"
+        href="tel:+996700207172"
         aria-label="Позвонить"
         className="grid h-14 w-14 place-items-center rounded-full gradient-brand text-primary-foreground shadow-soft hover:scale-105 transition"
       >
